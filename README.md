@@ -22,3 +22,17 @@ $ ./scripts/run_engine.sh
 ```
 
 It installs the dependencies and runs the `scratch.go`
+
+### Post bounty
+
+In order to post bounty, first, you need to upload the artifacts
+
+```
+$ curl -s -F file=@[artifact_path] http://localhost:31337/artifacts
+```
+
+Then, you get the [hash] as console output.
+
+```
+$ curl -s -H 'Content-Type: application/json' -d '{"amount": "62500000000000000", "uri": "[hash]", "duration": 10}' http://localhost:31337/bounties?account=[address]"
+```
