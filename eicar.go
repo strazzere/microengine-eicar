@@ -14,6 +14,7 @@ import (
     "net/url"
     "path"
     "strconv"
+    "strings"
     "time"
     "github.com/ethereum/go-ethereum/accounts/keystore"
     "github.com/ethereum/go-ethereum/common"
@@ -21,7 +22,7 @@ import (
     "github.com/ethereum/go-ethereum/core/types"
     "github.com/ethereum/go-ethereum/rlp"
     "github.com/gorilla/websocket"
-    "github.com/mr-tron/base58/base58/base58"
+    "github.com/mr-tron/base58/base58"
     uuid "github.com/satori/go.uuid"
 )
 
@@ -108,7 +109,7 @@ func scan(artifact string)(string, string, error){
     status      := NOT_FOUND
     description := ""
 
-    if artifact.Contains('X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'){
+    if strings.Contains(artifact, `X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*`) {
         status      = FOUND      
         description = "EICAR Detected." 
     }

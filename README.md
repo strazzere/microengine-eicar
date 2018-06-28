@@ -21,7 +21,7 @@ then, you need to install the go component dependencies:
 $ ./scripts/run_engine.sh
 ```
 
-It installs the dependencies and runs the `scratch.go`
+It installs the dependencies and runs the `eicar.go`
 
 ### Post bounty
 

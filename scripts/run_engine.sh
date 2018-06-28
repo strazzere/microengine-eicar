@@ -25,4 +25,4 @@ cp mr-tron/base58/base58/base58/*  mr-tron/base58
 cp satori/go.uuid/go.uuid/*        satori/go.uuid
 
 cd $curr
-go run scratch.go
+go run eicar.go
